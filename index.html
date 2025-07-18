@@ -10,7 +10,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="./dist/output.css">
-<link rel="stylesheet" href="./src/style.css">
+<link rel="stylesheet" href="./styles/style.css">
 
   <!-- Enable dark mode -->
   <script>
@@ -37,10 +37,10 @@
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-00 dark:text-gray-100 smooth-scroll">
 
   <!-- Header / Navbar -->
-  <header class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50">
+  <header class="bg-gray-100 dark:bg-gray-800 shadow-lg sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex gap-px items-center">
-        <img src="./assets/kk.png" alt="KK Logo" class="h-10 sm:h-12 max-w-[250px] object-contain" />
+        <img src="./assets/newKK.png" alt="KK Logo" class="h-10 sm:h-12 max-w-3250px] object-contain" />
         <div class="text-2xl font-bold text-blue-600 dark:text-white">KK Computers</div>
       </div>
 
@@ -48,6 +48,9 @@
       <div class="flex items-center space-x-5">
         <ul class="hidden md:flex space-x-8 items-center">
         <li><a href="#hero" class="hover:text-blue-600 text-xl transition-colors duration-200 font-semibold">Home</a></li>
+        <li>
+          <a href="./quiz.html"class="hover:text-blue-600 transition-colors text-xl duration-200 font-semibold">Quiz</a>
+        </li>
         <li><a href="#services" class="hover:text-blue-600 transition-colors text-xl duration-200 font-semibold">Services</a></li>
         <li><a href="#events" class="hover:text-blue-600 transition-colors duration-200 text-xl font-semibold">Events</a></li>
         <li><a href="#contact" class="hover:text-blue-600 transition-colors duration-200 text-xl font-semibold">Contact</a></li>
@@ -65,8 +68,6 @@
       </button>
         <button id="themeToggle" class="text-xl ml-4">🌙</button>
       </div>
-
-      <!-- Mobile Menu Button -->
 
 
     </nav>
@@ -96,7 +97,7 @@
                                         class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">Explore
                                         Our Services</a>
                                 <a href="#contact"
-                                        class="inline-block border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200">Get
+                                        class="inline-block border-2  border-white text-white font-bold py-3 px-[4.2rem] mt-2 md:px-8  rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200">Get
                                         Started</a>
                         </div>
                 </div>
@@ -224,205 +225,259 @@
 </section>
 
         <!-- Announcements/Ticker Section -->
-        <section id="announcements" class="py-12 bg-blue-50 border-y-2 border-blue-200">
-                <div class="max-w-7xl mx-auto px-4">
-                        <div class="flex items-center justify-center space-x-4">
-                                <div class="text-2xl">📢</div>
-                                <div>
-                                        <h3 class="text-lg font-semibold text-blue-800 mb-1">Latest Announcements</h3>
-                                        <div id="announcementTicker" class="text-blue-700 font-medium text-lg">
-                                                Loading announcements...
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-        </section>
+<section id="announcements" class="py-12 bg-blue-50 dark:bg-gray-800 border-y-2 border-blue-200 dark:border-gray-700">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-center space-x-4">
+      <div class="text-2xl">📢</div>
+      <div>
+        <h3 class="text-lg font-semibold text-blue-800 dark:text-white mb-1">Latest Announcements</h3>
+        <div id="announcementTicker" class="text-blue-700 dark:text-blue-300 font-medium text-lg">
+          Loading announcements...
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-100">
-                <div class="max-w-4xl mx-auto px-4">
-                        <div class="text-center mb-12">
-                                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
-                                <p class="text-xl text-gray-600">Ready to start your IT journey? Contact us today and
-                                        let's discuss how we can help you achieve your goals.</p>
-                        </div>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-white dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">What Our Students Say</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        Hear from our learners how KK Computers helped them succeed in the tech world.
+      </p>
+    </div>
 
-                        <div class="grid md:grid-cols-2 gap-12">
-                                <!-- Contact Form -->
-                                <div class="bg-white p-8 rounded-xl shadow-lg">
-                                        <h3 class="text-2xl font-semibold mb-6">Send us a Message</h3>
-                                        <form id="contactForm" class="space-y-6">
-                                                <div>
-                                                        <label for="name"
-                                                                class="block text-sm font-medium text-gray-700 mb-2">Full
-                                                                Name</label>
-                                                        <input type="text" id="name" name="name"
-                                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                                                placeholder="Your full name" required>
-                                                </div>
-                                                <div>
-                                                        <label for="email"
-                                                                class="block text-sm font-medium text-gray-700 mb-2">Email
-                                                                Address</label>
-                                                        <input type="email" id="email" name="email"
-                                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                                                placeholder="your.email@example.com" required>
-                                                </div>
-                                                <div>
-                                                        <label for="phone"
-                                                                class="block text-sm font-medium text-gray-700 mb-2">Phone
-                                                                Number</label>
-                                                        <input type="tel" id="phone" name="phone"
-                                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                                                placeholder="+1 (555) 123-4567">
-                                                </div>
-                                                <div>
-                                                        <label for="message"
-                                                                class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                                        <textarea id="message" name="message" rows="4"
-                                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                                                placeholder="Tell us about your interests and goals..."
-                                                                required></textarea>
-                                                </div>
-                                                <div id="formError" class="text-red-600 text-sm font-medium"></div>
-                                                <div id="formSuccess" class="text-green-600 text-sm font-medium"></div>
-                                                <button type="submit"
-                                                        class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold">Send
-                                                        Message</button>
-                                        </form>
-                                </div>
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">What Our Students Say</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300">
+        Hear directly from those we've helped grow in tech.
+      </p>
+    </div>
 
-                                <!-- Contact Info & WhatsApp -->
-                                <div class="space-y-8">
-                                        <div class="bg-white p-8 rounded-xl shadow-lg">
-                                                <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-                                                <div class="space-y-4">
-                                                        <div class="flex items-center space-x-3">
-                                                                <div class="text-2xl">📍</div>
-                                                                <div>
-                                                                        <p class="font-medium">Address</p>
-                                                                        <p class="text-gray-600">123 Tech Street,
-                                                                                Digital City, DC 12345</p>
-                                                                </div>
-                                                        </div>
-                                                        <div class="flex items-center space-x-3">
-                                                                <div class="text-2xl">📞</div>
-                                                                <div>
-                                                                        <p class="font-medium">Phone</p>
-                                                                        <p class="text-gray-600">+1 (555) 123-4567</p>
-                                                                </div>
-                                                        </div>
-                                                        <div class="flex items-center space-x-3">
-                                                                <div class="text-2xl">✉️</div>
-                                                                <div>
-                                                                        <p class="font-medium">Email</p>
-                                                                        <p class="text-gray-600">info@kkcomputers.com
-                                                                        </p>
-                                                                </div>
-                                                        </div>
-                                                        <div class="flex items-center space-x-3">
-                                                                <div class="text-2xl">🕒</div>
-                                                                <div>
-                                                                        <p class="font-medium">Hours</p>
-                                                                        <p class="text-gray-600">Mon-Fri:
-                                                                                9AM-6PM<br>Sat: 10AM-4PM</p>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
+    <!-- Horizontal scroll container -->
+    <div class="overflow-x-auto scrollbar-hide">
+      <div class="flex gap-6 snap-x snap-mandatory scroll-smooth pb-4">
+        <!-- Testimonial Card 1 -->
+        <div class="min-w-[300px] md:min-w-[400px] snap-start bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Priya Sharma</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Web Developer Intern</p>
+            </div>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            “The IT training at KK Computers was hands-on and industry-focused. I built projects and gained confidence to apply for real jobs.”
+          </p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+        </div>
 
-                                        <!-- WhatsApp Integration -->
-                                        <div class="bg-green-500 text-white p-8 rounded-xl shadow-lg text-center">
-                                                <div class="text-4xl mb-4">💬</div>
-                                                <h3 class="text-2xl font-semibold mb-4">Quick Chat on WhatsApp</h3>
-                                                <p class="mb-6">Get instant answers to your questions and quick support
-                                                        through WhatsApp.</p>
-                                                <a href="https://wa.me/15551234567?text=Hi%20KK%20Computers!%20I'm%20interested%20in%20learning%20more%20about%20your%20IT%20training%20programs."
-                                                        target="_blank"
-                                                        class="inline-block bg-white text-green-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-                                                        Chat on WhatsApp
-                                                </a>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-        </section>
+        <!-- Testimonial Card 2 -->
+        <div class="min-w-[300px] md:min-w-[400px] snap-start bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Rahul Verma</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">BCA Final Year Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            “The project guidance was amazing. They helped me turn my final year idea into a fully working system.”
+          </p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+        </div>
 
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-white py-12">
-                <div class="max-w-7xl mx-auto px-4">
-                        <div class="grid md:grid-cols-4 gap-8">
-                                <div>
-                                        <h3 class="text-2xl font-bold mb-4 text-blue-400">KK Computers</h3>
-                                        <p class="text-gray-300 mb-4">Empowering youth with IT skills through
-                                                comprehensive training and innovative programs.</p>
-                                        <div class="flex space-x-4">
-                                                <a href="#"
-                                                        class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Facebook</a>
-                                                <a href="#"
-                                                        class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Twitter</a>
-                                                <a href="#"
-                                                        class="text-gray-400 hover:text-blue-400 transition-colors duration-200">LinkedIn</a>
-                                        </div>
-                                </div>
-                                <div>
-                                        <h4 class="text-lg font-semibold mb-4">Services</h4>
-                                        <ul class="space-y-2 text-gray-300">
-                                                <li><a href="#services"
-                                                                class="hover:text-blue-400 transition-colors duration-200">IT
-                                                                Training</a></li>
-                                                <li><a href="#services"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Certifications</a>
-                                                </li>
-                                                <li><a href="#services"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Final
-                                                                Year Projects</a></li>
-                                                <li><a href="#services"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Digital
-                                                                Awareness</a></li>
-                                        </ul>
-                                </div>
-                                <div>
-                                        <h4 class="text-lg font-semibold mb-4">Events</h4>
-                                        <ul class="space-y-2 text-gray-300">
-                                                <li><a href="#events"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Hack
-                                                                The Web</a></li>
-                                                <li><a href="#events"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Tech
-                                                                Workshops</a></li>
-                                                <li><a href="#events"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Bootcamps</a>
-                                                </li>
-                                                <li><a href="#events"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Seminars</a>
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div>
-                                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                                        <ul class="space-y-2 text-gray-300">
-                                                <li><a href="#hero"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Home</a>
-                                                </li>
-                                                <li><a href="#services"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Services</a>
-                                                </li>
-                                                <li><a href="#events"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Events</a>
-                                                </li>
-                                                <li><a href="#contact"
-                                                                class="hover:text-blue-400 transition-colors duration-200">Contact</a>
-                                                </li>
-                                        </ul>
-                                </div>
-                        </div>
-                        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                                <p class="text-gray-400">&copy; 2024 KK Computers. All rights reserved. | Empowering the
-                                        next generation of IT professionals.</p>
-                        </div>
-                </div>
-        </footer>
+        <!-- Testimonial Card 3 -->
+        <div class="min-w-[300px] md:min-w-[400px] snap-start bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Aisha Khan</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Certification Holder</p>
+            </div>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            “Their certification courses helped me boost my resume and crack interviews. I now work at a tech startup.”
+          </p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <!-- Testimonial Card 4 -->
+        <div class="min-w-[300px] md:min-w-[400px] snap-start bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+          <div class="flex items-center mb-4">
+            <img src="https://randomuser.me/api/portraits/men/74.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Manish Rawat</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">MCA Student</p>
+            </div>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            “I enrolled in their digital awareness program and it completely changed how I approach tech.”
+          </p>
+          <div class="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300">
+        Ready to start your IT journey? Contact us today and let's discuss how we can help you achieve your goals.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-6">Send us a Message</h3>
+        <form id="contactForm" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+            <input type="text" id="name" name="name"
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              placeholder="Your full name" required>
+          </div>
+          <div>
+            <label for="email"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+            <input type="email" id="email" name="email"
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              placeholder="your.email@example.com" required>
+          </div>
+          <div>
+            <label for="phone"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              placeholder="+91 1234567890">
+          </div>
+          <div>
+            <label for="message"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+            <textarea id="message" name="message" rows="4"
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+              placeholder="Tell us about your interests and goals..." required></textarea>
+          </div>
+          <div id="formError" class="text-red-600 text-sm font-medium"></div>
+          <div id="formSuccess" class="text-green-600 text-sm font-medium"></div>
+          <button type="submit"
+            class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold">Send
+            Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info & WhatsApp -->
+      <div class="space-y-8">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="text-2xl">📍</div>
+              <div>
+                <p class="font-medium">Address</p>
+                <p class="text-gray-600 dark:text-gray-300">123 Tech Street, Digital City, DC 12345</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="text-2xl">📞</div>
+              <div>
+                <p class="font-medium">Phone</p>
+                <p class="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="text-2xl">✉️</div>
+              <div>
+                <p class="font-medium">Email</p>
+                <p class="text-gray-600 dark:text-gray-300">info@kkcomputers.com</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="text-2xl">🕒</div>
+              <div>
+                <p class="font-medium">Hours</p>
+                <p class="text-gray-600 dark:text-gray-300">Mon-Fri: 9AM-6PM<br>Sat: 10AM-4PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- WhatsApp Integration -->
+        <div class="bg-green-500 text-white p-8 rounded-xl shadow-lg text-center">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-2xl font-semibold mb-4">Quick Chat on WhatsApp</h3>
+          <p class="mb-6">Get instant answers to your questions and quick support through WhatsApp.</p>
+          <a href="https://wa.me/15551234567?text=Hi%20KK%20Computers!%20I'm%20interested%20in%20learning%20more%20about%20your%20IT%20training%20programs."
+            target="_blank"
+            class="inline-block bg-white text-green-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white  py-12 mt-5 w-full">
+  <div class="px-4 md:px-12">
+    <div class="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-blue-400">KK Computers</h3>
+        <p class="text-gray-300 mb-4">Empowering youth with IT skills through comprehensive training and innovative programs.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Facebook</a>
+          <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-200">LinkedIn</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Services</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#services" class="hover:text-blue-400 transition-colors duration-200">IT Training</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors duration-200">Certifications</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors duration-200">Final Year Projects</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors duration-200">Digital Awareness</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Events</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#events" class="hover:text-blue-400 transition-colors duration-200">Hack The Web</a></li>
+          <li><a href="#events" class="hover:text-blue-400 transition-colors duration-200">Tech Workshops</a></li>
+          <li><a href="#events" class="hover:text-blue-400 transition-colors duration-200">Bootcamps</a></li>
+          <li><a href="#events" class="hover:text-blue-400 transition-colors duration-200">Seminars</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#hero" class="hover:text-blue-400 transition-colors duration-200">Home</a></li>
+          <li><a href="#services" class="hover:text-blue-400 transition-colors duration-200">Services</a></li>
+          <li><a href="#events" class="hover:text-blue-400 transition-colors duration-200">Events</a></li>
+          <li><a href="#contact" class="hover:text-blue-400 transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center max-w-7xl mx-auto">
+      <p class="text-gray-400">&copy; 2024 KK Computers. All rights reserved. | Empowering the next generation of IT professionals.</p>
+    </div>
+  </div>
+</footer>
+
+
   <script>
 
   </script>

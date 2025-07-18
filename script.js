@@ -338,15 +338,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// Global error handler
-window.addEventListener('error', (e) => {
-  console.error('Global error caught:', e.error);
-  // Optionally show user-friendly error message
-  // showNotification('Something went wrong. Please refresh the page.', 'error');
-});
-
-// Handle unhandled promise rejections
-window.addEventListener('unhandledrejection', (e) => {
-  console.error('Unhandled promise rejection:', e.reason);
-  e.preventDefault();
-});

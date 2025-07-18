@@ -1,0 +1,27 @@
+#loginBtn {
+  color: #090909;
+  padding: 0.4em 1.1em;
+  font-size: 20px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+
+}
+
+#loginBtn:active {
+  color: #666;
+  box-shadow: inset 4px 2px 8px #c5c5c5, inset -4px -4px 8px #e8caca;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
